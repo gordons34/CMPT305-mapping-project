@@ -36,21 +36,12 @@ When the app starts, it reads the City's open-data CSV (`Property_Assessment_Dat
 
 ### Project structure
 
-src/main/java/com/example/cmpt305project/
-├── Main.java                      # App entry point; loads main.fxml
-├── Controllers/
-│   └── MainController.java        # UI logic, map setup, search & statistics
-├── PropertyAssessmentHandler/
-│   ├── PropertyAssessmentDAO.java       # Data access interface
-│   ├── CsvPropertyAssessmentDAO.java    # Loads assessments from the CSV
-│   └── PropertyAssessmentClasses/       # Domain model: PropertyAssessment(s),
-│                                        # Address, Location, Neighbourhood, AssessClass
-└── HelperClasses/
-    ├── ConvexHull.java / CPoint.java    # Neighbourhood boundary calculation
-    ├── FxUtilTest.java                  # ComboBox autocomplete helper
-    ├── AddressTable.java                # Table row model
-    └── SceneSwitch.java
-src/main/resources/                # FXML layout, CSS styles, images/icons
+- **App entry point (`Main.java`):** launches the JavaFX window and loads the UI layout from `main.fxml`.
+- **UI controller (`Controllers/`):** handles everything the user interacts with. It sets up the ArcGIS map, runs the three search tabs and calculates the statistics shown on screen.
+- **Data layer (`PropertyAssessmentHandler/`):** reads the CSV through a data access object (DAO) and turns each row into model classes: a property assessment and its address, location, neighbourhood and assessment class. It also has the filtering and statistics methods (min, max, mean, median) that the UI uses.
+- **Helpers (`HelperClasses/`):** utility code, including the convex hull algorithm that draws neighbourhood boundaries and the autocomplete for the search boxes.
+- **Resources (`src/main/resources/`):** the FXML layout, CSS stylesheets and image assets.
+
 
 ---
 
