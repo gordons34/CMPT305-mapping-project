@@ -220,7 +220,7 @@ public class MainController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
-        String yourApiKey = "AAPK4a2ea8e3b119411d8e6b4541a5da4a0fRve45bsPCDMyOfiwCmfpepUybznK3-nbE2cQmIyOVa_aOTQZoO3UlMzocbi4xI1g";
+        String yourApiKey = "PLACEHOLDER";
         ArcGISRuntimeEnvironment.setApiKey(yourApiKey);
 
         // Initialize ComboBox for Find by neighbourhood
